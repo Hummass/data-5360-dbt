@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: insurance_landing
+    database: thomasgreer
+    schema: insurance_dw_source
+    tables:
+      - name: agents
+      - name: claims
+      - name: customers
+      - name: policies
+  
