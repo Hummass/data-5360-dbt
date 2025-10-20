@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: oliver_dim_customer
+    description: "Customer information"
+  - name: oliver_dim_date
+    description: "date of sales"
+  - name: oliver_dim_employee
+    description: "Employee information"
+  - name: oliver_dim_product
+    description: "product information"
+  - name: oliver_dim_store
+    description: "store information"
+  - name: fact_sales
+    description: "Sales fact information"
