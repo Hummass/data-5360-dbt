@@ -13,3 +13,9 @@ models:
     description: "store information"
   - name: fact_sales
     description: "Sales fact information"
+  - name: stg_employee_certifications
+    description: "Staging model for employee certifications"
+  - name: fact_certification
+    description: |
+      Employee Certification Fact.
+      Grain: one row per employee_key + date_key + certification_name.
