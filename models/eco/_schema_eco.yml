@@ -1,0 +1,31 @@
+version: 2
+
+models:
+  - name: dim_eco_date
+    description: "Date Dimension for Eco Essentials"
+
+  - name: dim_eco_product
+    description: "Product Dimension"
+
+  - name: dim_campaign
+    description: "Campaign Dimension"
+
+  - name: stg_marketing_emails
+    description: |
+      Staging model for marketing email events.
+      Light reshaping only—no business logic.
+
+  - name: dim_eco_customer
+    description: |
+      Conformed Customer Dimension combining customers and  subscribers.
+
+  - name: fact_eco_sales
+    description: |
+      Sales Fact. 
+
+  - name: fact_email_event
+    description: |
+      Email Event Fact
+
+  - name: sales
+    description: "Analyst-friendly convenience table for sales reporting."
