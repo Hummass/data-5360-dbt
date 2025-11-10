@@ -2,19 +2,49 @@ version: 2
 
 models:
   - name: oliver_dim_customer
-    description: "Customer information"
+    description: "Oliver Customer Dimension"
+    columns:
+      - name: CUSTOMER_ID
+        tests:
+          - unique
+
   - name: oliver_dim_date
-    description: "date of sales"
+    description: "Oliver Date Dimension"
+    columns:
+      - name: DAY_OF_WEEK
+        tests:
+          - accepted_values:
+              values:
+                - 1
+                - 2
+                - 3
+                - 4
+                - 5
+                - 6
+                - 7
+
   - name: oliver_dim_employee
     description: "Employee information"
+
   - name: oliver_dim_product
     description: "product information"
+
   - name: oliver_dim_store
     description: "store information"
+
   - name: fact_sales
-    description: "Sales fact information"
+    description: "Oliver Sales Fact"
+    columns:
+      - name: PRODUCT_KEY
+        tests:
+          - not_null 
+          - relationships:
+              to: ref('oliver_dim_product')
+              field: PRODUCT_KEY
+
   - name: stg_employee_certifications
     description: "Staging model for employee certifications"
+
   - name: fact_certification
     description: |
       Employee Certification Fact.
